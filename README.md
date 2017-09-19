@@ -17,6 +17,7 @@ Getting started with electron.js modules
 ### Description 
 
 * Electron modules demo's.
+* A clipboard application that demonstrate the ability to access the system clipboard programmatically.
 
 ##
 
@@ -56,4 +57,15 @@ Getting started with electron.js modules
 5. **_Enjoy!_**
 
 ##
+
+
+Copied Content
+
+![alt tag](https://github.com/divyanshu-rawat/electron-modules/blob/master/clipboard-electron-demo/snap/Screen%20Shot%202017-09-20%20at%202.25.37%20AM.png)
+
+
+Content In the Application Tray Icon.
+
+![alt tag](https://github.com/divyanshu-rawat/electron-modules/blob/master/clipboard-electron-demo/snap/Screen%20Shot%202017-09-20%20at%202.26.08%20AM.png)
+
 
