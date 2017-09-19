@@ -18,6 +18,12 @@ function formatItem(item){
 
 }
 
+function registerShortcuts(globalShortcut,clipboard,stack){
+
+
+
+}
+
 function templateForStack(clipboard,stack){
 
 	return stack.map((item,i) =>{
@@ -79,7 +85,7 @@ app.on("ready",_=>{
 
 		tray.setContextMenu(Menu.buildFromTemplate(templateForStack(clipboard,stack)));
 
-		// console.log(templateForStack(clipboard,stack));
+		console.log(templateForStack(clipboard,stack));
 
 		registerShortcuts(globalShortcut,clipboard,stack);
 
