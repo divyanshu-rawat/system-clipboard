@@ -2,14 +2,15 @@
   "name": "clipboard-electron-demo",
   "version": "1.0.0",
   "description": "",
-  "main": "src/main.js",
+  "main": "main.js",
   "scripts": {
-    "start":"electron ."
+    "start": "electron ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "electron": "^6.0.0",
     "electron-prebuilt": "^1.4.13"
   }
 }

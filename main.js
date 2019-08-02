@@ -20,6 +20,8 @@ function formatItem(item) {
   return item.length > MAX_LENGTH ? item.substr(0, MAX_LENGTH) + '...' : item;
 }
 
+function registerShortcuts(globalShortcut, clipboard, stack) { }
+
 function templateForStack(clipboard, stack) {
   return stack.map((item, i) => {
     return {
@@ -31,10 +33,8 @@ function templateForStack(clipboard, stack) {
 }
 
 function checkClipboardForChange(clipboard, onChange) {
-
   let cached = clipboard.readText();
   let latest;
-
   setInterval(_ => {
     latest = clipboard.readText();
     if (latest != cached) {
@@ -46,20 +46,17 @@ function checkClipboardForChange(clipboard, onChange) {
 }
 
 app.on("ready", _ => {
-
-  const tray = new Tray(path.join("src", "marker.png"));
+  const iconPath = path.join(__dirname, 'Asset/marker.png');
+  const tray = new Tray(iconPath);
   let stack = [];
   tray.setContextMenu(Menu.buildFromTemplate([
-
     {
       label: '<Empty>',
       enabled: false
-	}
-	
+    }
   ]));
 
   checkClipboardForChange(clipboard, text => {
-
     stack = addToStack(text, stack);
     tray.setContextMenu(Menu.buildFromTemplate(templateForStack(clipboard, stack)));
     console.log(templateForStack(clipboard, stack));
